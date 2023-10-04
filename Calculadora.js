@@ -20,39 +20,38 @@ function Calculadora() {
   };
 
   return (
-    <div>
-      <div>
-        <input type="text" value={input} readOnly />
+    <div className="flex flex-col items-center max-w-md mx-auto mt-20 p-4 border border-gray-300 rounded shadow-md">
+      <div className="w-full mb-4">
+        <input className="w-full p-2 text-lg border rounded" type="text" value={input} readOnly />
       </div>
-      <div>
-        <button onClick={() => handleClick('1')}>1</button>
-        <button onClick={() => handleClick('2')}>2</button>
-        <button onClick={() => handleClick('3')}>3</button>
-        <button onClick={() => handleClick('+')}>+</button>
+      <div className="grid grid-cols-4 gap-4 w-full">
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('1')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('2')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('3')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('+')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('4')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('5')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('6')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('-')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('7')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('8')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('9')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('*')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('0')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('.')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClick('/')}>1</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleEqual()}>=</button>
+        <button className="p-2 text-lg bg-gray-200 rounded hover:bg-gray-300 focus:outline-none" onClick={() => handleClear()}>C</button>
       </div>
-      <div>
-        <button onClick={() => handleClick('4')}>4</button>
-        <button onClick={() => handleClick('5')}>5</button>
-        <button onClick={() => handleClick('6')}>6</button>
-        <button onClick={() => handleClick('-')}>-</button>
-      </div>
-      <div>
-        <button onClick={() => handleClick('7')}>7</button>
-        <button onClick={() => handleClick('8')}>8</button>
-        <button onClick={() => handleClick('9')}>9</button>
-        <button onClick={() => handleClick('*')}>*</button>
-      </div>
-      <div>
-        <button onClick={() => handleClick('0')}>0</button>
-        <button onClick={() => handleClick('.')}>.</button>
-        <button onClick={() => handleClick('/')}>/</button>
-        <button onClick={() => handleEqual()}>=</button>
-      </div>
-      <div>
-        <button onClick={() => handleClear()}>C</button>
+      <div className="mt-4">
+        <button className="w-full p-2 text-lg bg-red-500 text-white rounded hover:bg-red-600 focus:outline-none" onClick={() => handleClear()}>C</button>
       </div>
     </div>
   );
 }
 
 export default Calculadora;
+
+
+
+
